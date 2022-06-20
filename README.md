@@ -52,37 +52,8 @@ données en entrée sont injectées sous forme de fichier.
 //
 # CONSOLE OUTPUT
 
+![image](https://user-images.githubusercontent.com/3178189/174660537-a082e3ac-9368-4279-bfe8-ee6f81aec79d.png)
 
-20:28:15.501 [main] INFO com.youness.mowerkata.domain.Mower - ****** [startAll] executing all commands  by mower  at : 1 2 N , number of commands in queue : 9 ****
-20:28:15.507 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Left Command 
-20:28:15.507 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 1 2 W
-20:28:15.507 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Left Command 
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 0 2 S
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Left Command 
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 0 1 E
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Left Command 
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 1 1 N
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 1 2 N
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - ****** [startAll] executing all commands  by mower  at : 3 3 E , number of commands in queue : 10 ****
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 3 3 E
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 4 3 E
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Right Command 
-20:28:15.508 [main] INFO com.youness.mowerkata.domain.Mower - previous position 5 3 E
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - after turn right position 5 3 S
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 5 3 S
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 5 2 S
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Right Command 
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - previous position 5 1 S
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - after turn right position 5 1 W
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 5 1 W
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Right Command 
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - previous position 4 1 W
-20:28:15.509 [main] INFO com.youness.mowerkata.domain.Mower - after turn right position 4 1 N
-20:28:15.510 [main] INFO com.youness.mowerkata.domain.Mower - Perform turn Right Command 
-20:28:15.510 [main] INFO com.youness.mowerkata.domain.Mower - previous position 4 1 N
-20:28:15.510 [main] INFO com.youness.mowerkata.domain.Mower - after turn right position 4 1 E
-20:28:15.510 [main] INFO com.youness.mowerkata.domain.Mower - before advanceForward 4 1 E
-1 3 N
-5 1 E
+
 
 Process finished with exit code 0
