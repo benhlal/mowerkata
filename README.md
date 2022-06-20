@@ -46,10 +46,12 @@ TEST
 Le fichier suivant est fourni en entrée : 5 5 1 2 N GAGAGAGAA 3 3 E AADAADADDA
 On attend le résultat suivant (position finale des tondeuses) : 1 3 N 5 1 E NB: Les
 données en entrée sont injectées sous forme de fichier.
+*************************************************************************************************************
+# RUN programm
 
+C:\>java -jar mowerkata-0.0.1-SNAPSHOT.jar test.txt
 
-
-//
+**************************************************************************************************************
 # CONSOLE OUTPUT
 
 ![image](https://user-images.githubusercontent.com/3178189/174660537-a082e3ac-9368-4279-bfe8-ee6f81aec79d.png)
