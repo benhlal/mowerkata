@@ -1,5 +1,6 @@
 package com.youness.mowerkata;
 
+import com.youness.mowerkata.anotation.Client;
 import com.youness.mowerkata.exception.FileNameNotProvidedException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,6 +16,7 @@ import java.util.stream.Stream;
 
 
 @Slf4j
+@Client
 public class Application {
 
     public static void main(String[] args) throws FileNameNotProvidedException {
