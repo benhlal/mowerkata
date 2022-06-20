@@ -22,9 +22,7 @@ class ApplicationTests {
         List<String> fileLines = Application.readInstructionsFile(args[0]);
         //a valid file must have land , mower, commands instructions
         assertThat(fileLines.size()).isOdd();
-        assertThat(fileLines.size()).isEqualTo(5);
         assertThat(fileLines.stream().allMatch(s -> !s.isEmpty())).isTrue();
     }
-
 
 }

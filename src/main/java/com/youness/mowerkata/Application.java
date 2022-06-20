@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -27,6 +28,7 @@ public class Application {
                 .orElseThrow(() -> new FileNameNotProvidedException("File name not provided"));
 
         List<String> fileLines = readInstructionsFile(fileName);
+
     }
 
 
@@ -40,8 +42,9 @@ public class Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        List<String> preparedLines = fileLines.stream().map(String::strip).filter(s -> !s.isEmpty()).collect(Collectors.toList());
 
-        return fileLines;
+        return preparedLines;
     }
 
 }
