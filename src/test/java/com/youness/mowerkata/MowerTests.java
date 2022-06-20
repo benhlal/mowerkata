@@ -69,7 +69,7 @@ public class MowerTests {
 
     @Test
     public void given_North_when_run_startAll_it_should_execute_all_commands_and_zizag() {
-// statring cordinates 1,1
+        // statring cordinates 1,1
         //  ADADAGAGA = zigzag
         Queue<ICommand> drawSquareCommand = new LinkedList<>();
         drawSquareCommand.add(new AdvanceCommand());
@@ -95,5 +95,33 @@ public class MowerTests {
 
     }
 
+
+    @Test
+    public void given_initial_position_when_exceed_land_boundaries_should_skip_command() {
+        // statring cordinates 1,1 N
+        // land dims 5 5
+
+        Queue<ICommand> drawSquareCommand = new LinkedList<>();
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+        drawSquareCommand.add(new AdvanceCommand());
+
+
+        mower.setCommandQueue(drawSquareCommand);
+
+        mower.startAll();
+
+        assertEquals(mower.getPosition().getCoordinates().getY(), 5);
+        // direction should be NORTH
+        assertEquals(Direction.NORTH, mower.getPosition().getDirection());
+
+
+    }
 
 }

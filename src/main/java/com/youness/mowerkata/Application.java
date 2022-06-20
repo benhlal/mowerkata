@@ -1,7 +1,12 @@
 package com.youness.mowerkata;
 
 import com.youness.mowerkata.anotation.Client;
+import com.youness.mowerkata.domain.GrassLand;
+import com.youness.mowerkata.domain.Position;
+import com.youness.mowerkata.exception.CommandsProcessingException;
 import com.youness.mowerkata.exception.FileNameNotProvidedException;
+import com.youness.mowerkata.exception.InstructionsProcessingException;
+import com.youness.mowerkata.processor.InstructionsHandler;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -11,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,18 +25,22 @@ import java.util.stream.Stream;
 @Client
 public class Application {
 
-    public static void main(String[] args) throws FileNameNotProvidedException {
+    public static void main(String[] args) throws FileNameNotProvidedException, CommandsProcessingException, InstructionsProcessingException {
         //  String[] fileName = new String[]{"assets/test.txt"};
 
         if (args == null || args.length == 0) {
             log.error("Please provide file name ");
         }
-        String fileName = Arrays.stream(args)
-                .findAny()
-                .orElseThrow(() -> new FileNameNotProvidedException("File name not provided"));
+        String fileName = Arrays.stream(args).findAny().orElseThrow(() -> new FileNameNotProvidedException("File name not provided"));
 
         List<String> fileLines = readInstructionsFile(fileName);
 
+
+        InstructionsHandler instructionsHandler = new InstructionsHandler(fileLines);
+        GrassLand grassLand = instructionsHandler.handleFileInstructions();
+        // invoke commands execution
+        Map<Position, String> positionStringMap = grassLand.invokeStartAll();
+        positionStringMap.values().stream().forEach(System.out::println);
     }
 
 
