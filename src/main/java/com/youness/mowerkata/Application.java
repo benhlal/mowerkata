@@ -46,7 +46,8 @@ public class Application {
 
     public static List<String> readInstructionsFile(String fileName) {
 
-        Path relative = Paths.get("src", "main", "resources", "assets", fileName);
+        // Path relative = Paths.get("src", "main", "resources", "assets", fileName);
+        Path relative = Paths.get(fileName);
         Path absolutePathFile = relative.toAbsolutePath();
         List<String> fileLines = new ArrayList<>();
         try (Stream<String> stream = Files.lines(absolutePathFile)) {
